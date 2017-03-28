@@ -8,6 +8,8 @@
 
 3.[Vuex 模块化实现待办事项的状态管理](https://github.com/lin-xin/blog/issues/5)
 
+4.[Vue.js 插件开发详解](https://github.com/lin-xin/blog/issues/9)
+
 ## [JavaScript](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=javascript)
 1.[JavaScript 中 this 的详解](https://github.com/lin-xin/blog/issues/6)
 
