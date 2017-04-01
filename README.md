@@ -1,6 +1,8 @@
 # 林鑫个人博客 #
 用于总结自己平时工作和学习中的经验。
 
+订阅请 watch， 收藏点赞请 star， fork 好像没必要
+
 ## [Vue](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=vue)
 1.[Vue2 后台管理系统解决方案](https://github.com/lin-xin/manage-system)
 
