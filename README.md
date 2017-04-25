@@ -22,6 +22,8 @@
 ## [HTML5](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=HTML5)
 1.[HTML5 高级系列：web Storage](https://github.com/lin-xin/blog/issues/11)
 
+2.[HTML5 高级系列：indexedDB 数据库](https://github.com/lin-xin/blog/issues/12)
+
 ## [webpack](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=webpack)
 1.[提高 webpack 构建 Vue 项目的速度](https://github.com/lin-xin/blog/issues/10)
 
