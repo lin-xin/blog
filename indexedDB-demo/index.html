@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>indexedDB demo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="main">
+            <div class="v-form">
+                <input type="text" class="v-input" placeholder="请输入姓名" name="username" v-model="username">
+                <input type="text" class="v-input" placeholder="请输入年龄" name="age" v-model="age">
+                <input type="text" class="v-input" placeholder="请输入邮箱" name="email" v-model="email">
+                <button type="text" class="v-btn" @click="submit">提交</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <th>#</th>
+                    <th>用户名</th>
+                    <th>年龄</th>
+                    <th>邮箱</th>
+                    <th>操作</th>
+                </thead>
+                <tr v-for="(item,i) in dbData" :key="item.id">
+                    <td v-html="i+1"></td>
+                    <td v-html="item.username"></td>
+                    <td v-html="item.age"></td>
+                    <td v-html="item.email"></td>
+                    <td>
+                        <button class="edit" @click="edit(i)">编辑</button>
+                        <button class="del" @click="deleteOneData(item.id)">删除</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.2.6/vue.min.js"></script>
+    <script src="index.js"></script>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                edit_id: 0,
+                username: '',
+                age: '',
+                email: '',
+                dbData: []
+            },
+            mounted: function(){
+                openDB();
+                // indexedDB.deleteDatabase('usersDB');
+            },
+            methods: {
+                submit: function(){
+                    if(this.username && this.age && this.email){
+                        var param = {
+                            username: this.username,
+                            age: this.age,
+                            email: this.email
+                        }
+                        if(this.edit_id > 0){
+                            param.id = this.edit_id
+                        }
+                        saveData(param);
+                        this.getData();
+                        this.username = this.age = this.email = '';
+                    }
+                },
+                getData: function(){
+                    var self = this;
+                    searchData(function(){
+                        self.dbData = dbData;
+                    });
+                },
+                edit: function(index){
+                    this.username = dbData[index].username;
+                    this.age = dbData[index].age;
+                    this.email = dbData[index].email;
+                    this.edit_id = dbData[index].id;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
