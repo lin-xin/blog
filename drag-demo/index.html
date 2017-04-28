@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>drag demo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 100%;
+            max-width: 1150px;
+            margin: auto;
+        }
+        .list{
+            padding:10px;
+            height: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="main">
+            <div class="list" draggable="true">这里是列表1的标题</div>
+            <div class="list" draggable="true">这里是列表2的标题</div>
+            <div class="list" draggable="true">这里是列表3的标题</div>
+            <div class="list" draggable="true">这里是列表4的标题</div>
+            <div class="list" draggable="true">这里是列表5的标题</div>
+            <div class="list" draggable="true">这里是列表6的标题</div>
+            <div class="list" draggable="true">这里是列表7的标题</div>
+        </div>
+        <div id="test"></div>
+    </div>
+    <script src="index.js"></script>
+    <script src="http://timruffles.github.io/ios-html5-drag-drop-shim/ios-drag-drop.js"></script>
+    
+</body>
+</html>
