@@ -1,5 +1,6 @@
 var iosDragDropShim = { enableEnterLeave: true }                // 兼容移动端
 var source = document.querySelectorAll('.list'),
+    recycle = document.getElementById('recycle'),
     dragElement = null,                                         // 用于存放拖动元素
     lock = true;                                                // 最后元素拖放拖放时会进入enter和leave的循环，用来锁住
 
@@ -32,6 +33,10 @@ for(var i = 0; i < source.length; i++){
         }
     }, false)
 };
+
+recycle.addEventListener('drop', function(ev){                  // 拖进回收站则删除该元素
+    dragElement.parentNode.removeChild(dragElement);
+}, false)
 
 document.ondragover = function(e){e.preventDefault();}          // 必须设置dragover阻止默认事件
 document.ondrop = function(e){e.preventDefault();}
