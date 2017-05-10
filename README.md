@@ -26,6 +26,9 @@
 
 3. [HTML5 进阶系列：拖放 API 实现拖放排序](https://github.com/lin-xin/blog/issues/13)
 
+## [微信小程序](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=wxapp)
+1. [微信小程序之购物车功能](https://github.com/lin-xin/blog/issues/14)
+
 ## [webpack](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=webpack)
 1. [提高 webpack 构建 Vue 项目的速度](https://github.com/lin-xin/blog/issues/10)
 
