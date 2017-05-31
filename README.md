@@ -19,6 +19,8 @@
 
 3. [JavaScript 中 闭包 的详解](https://github.com/lin-xin/blog/issues/8)
 
+4. [sChart.js：一个小型简单的图表库](https://github.com/lin-xin/blog/issues/16)
+
 ## [HTML5](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=HTML5)
 1. [HTML5 进阶系列：web Storage](https://github.com/lin-xin/blog/issues/11)
 
