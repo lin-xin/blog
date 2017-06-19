@@ -12,6 +12,8 @@
 
 4. [Vue.js 插件开发详解](https://github.com/lin-xin/blog/issues/9)
 
+5. [vue-schart ： vue.js 的图表组件](https://github.com/lin-xin/blog/issues/17)
+
 ## [JavaScript](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=javascript)
 1. [JavaScript 中 this 的详解](https://github.com/lin-xin/blog/issues/6)
 
