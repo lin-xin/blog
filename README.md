@@ -23,6 +23,8 @@
 
 4. [sChart.js：一个小型简单的图表库](https://github.com/lin-xin/blog/issues/16)
 
+5. 移动端图片上传旋转的解决方法（待更新）
+
 ## [HTML5](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=HTML5)
 1. [HTML5 进阶系列：web Storage](https://github.com/lin-xin/blog/issues/11)
 
@@ -31,6 +33,8 @@
 3. [HTML5 进阶系列：拖放 API 实现拖放排序](https://github.com/lin-xin/blog/issues/13)
 
 4. [HTML5 进阶系列：canvas 动态图表](https://github.com/lin-xin/blog/issues/15)
+
+5. HTML5 进阶系列：文件上传下载（待更新）
 
 ## [微信小程序](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=wxapp)
 1. [微信小程序之购物车功能](https://github.com/lin-xin/blog/issues/14)

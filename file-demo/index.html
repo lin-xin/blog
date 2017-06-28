@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>移动端上传图片解决方法</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <style>
+            
+            .input-div{
+                position: relative;
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #fff;
+                background: #03a9f4;
+            }
+            #files{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100px;
+                height: 40px;
+                opacity: 0;
+                z-index: 10;
+            }
+            #preview{
+                width: 300px;
+            }
+        </style>
+        <script src="small-exif.js"></script>
+    </head>
+    <body>
+        <div class="input-div">
+            上传图片
+            <input type="file" id="files" >
+        </div>
+    	
+        <img src="" id="preview">
+        <script>
+            var ipt = document.getElementById('files'),
+                img = document.getElementById('preview'),
+                Orientation = null;
+            ipt.onchange = function () {
+                var file = ipt.files[0],
+                    reader = new FileReader(),
+                    image = new Image();
+                    
+                if(file){
+                	EXIF.getData(file, function() {  
+	            		Orientation = EXIF.getTag(this, 'Orientation');
+                        console.log(Orientation)
+	        		});
+                    reader.onload = function (ev) {
+                        image.src = ev.target.result;
+                        image.onload = function () {
+                            var imgWidth = this.width,
+                                imgHeight = this.height;
+                                
+                            if(imgWidth > imgHeight && imgWidth > 750){
+                                imgWidth = 750;
+                                imgHeight = Math.ceil(750 * this.height / this.width);
+                            }else if(imgWidth < imgHeight && imgHeight > 1334){
+                                imgWidth = Math.ceil(1334 * this.width / this.height);
+                                imgHeight = 1334;
+                            }
+                            
+                            var canvas = document.createElement("canvas"),
+                            ctx = canvas.getContext('2d');
+                            canvas.width = imgWidth;
+                            canvas.height = imgHeight;
+                            if(Orientation && Orientation != 1){
+                                switch(Orientation){
+                                    case 6:
+                                        canvas.width = imgHeight;    
+                                        canvas.height = imgWidth;    
+                                        ctx.rotate(Math.PI / 2);    
+                                        ctx.drawImage(this, 0, -imgHeight, imgWidth, imgHeight);
+                                        break;
+                                    case 3:
+                                        ctx.rotate(Math.PI);    
+                                        ctx.drawImage(this, -imgWidth, -imgHeight, imgWidth, imgHeight);
+                                        break;
+                                    case 8:
+                                        canvas.width = imgHeight;    
+                                        canvas.height = imgWidth;    
+                                        ctx.rotate(3 * Math.PI / 2);    
+                                        ctx.drawImage(this, -imgWidth, 0, imgWidth, imgHeight);
+                                        break;
+                                }
+                            }else{
+                                ctx.drawImage(this, 0, 0, imgWidth, imgHeight);
+                            }
+                            
+                            var url = canvas.toDataURL("image/jpeg", 1);
+                            img.src = url;
+                        }
+                    }
+                    reader.readAsDataURL(file);
+                }
+            }
+        </script>
+    </body>
+</html>
