@@ -189,7 +189,6 @@ function readEXIFData(file, start) {
     }
 
     var firstIFDOffset = file.getUint32(tiffOffset + 4, !bigEnd);
-    console.log(tiffOffset);
     if (firstIFDOffset < 0x00000008) {
         return false;
     }

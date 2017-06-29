@@ -5,7 +5,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <style>
-            
             .input-div{
                 position: relative;
                 width: 100px;
@@ -36,7 +35,7 @@
             <input type="file" id="files" >
         </div>
     	
-        <img src="" id="preview">
+        <img src="blank.jpg" id="preview">
         <script>
             var ipt = document.getElementById('files'),
                 img = document.getElementById('preview'),
@@ -47,6 +46,7 @@
                     image = new Image();
                     
                 if(file){
+                    console.log(file.size)
                 	EXIF.getData(file, function() {  
 	            		Orientation = EXIF.getTag(this, 'Orientation');
                         console.log(Orientation)
@@ -91,11 +91,9 @@
                             }else{
                                 ctx.drawImage(this, 0, 0, imgWidth, imgHeight);
                             }
-                            
-                            var url = canvas.toDataURL("image/jpeg", 1);
-                            img.src = url;
+                            img.src = canvas.toDataURL("image/jpeg", 1);
                         }
-                    }
+                    };
                     reader.readAsDataURL(file);
                 }
             }

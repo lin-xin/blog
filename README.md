@@ -23,7 +23,7 @@
 
 4. [sChart.js：一个小型简单的图表库](https://github.com/lin-xin/blog/issues/16)
 
-5. 移动端图片上传旋转的解决方法（待更新）
+5. 移动端图片上传旋转、压缩的解决方案（待更新）
 
 ## [HTML5](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=HTML5)
 1. [HTML5 进阶系列：web Storage](https://github.com/lin-xin/blog/issues/11)
