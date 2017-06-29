@@ -46,10 +46,8 @@
                     image = new Image();
                     
                 if(file){
-                    console.log(file.size)
                 	EXIF.getData(file, function() {  
 	            		Orientation = EXIF.getTag(this, 'Orientation');
-                        console.log(Orientation)
 	        		});
                     reader.onload = function (ev) {
                         image.src = ev.target.result;
