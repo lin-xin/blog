@@ -14,6 +14,8 @@
 
 5. [vue-schart ： vue.js 的图表组件](https://github.com/lin-xin/blog/issues/17)
 
+6. [vue.js 组件之间传递数据](https://github.com/lin-xin/blog/issues/20)
+
 ## [JavaScript](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=javascript)
 1. [JavaScript 中 this 的详解](https://github.com/lin-xin/blog/issues/6)
 
