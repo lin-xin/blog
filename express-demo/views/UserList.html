@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户列表页面</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/libs/mdui/css/mdui.css">
+</head>
+<body class="mdui-theme-primary-teal">
+    <div class="mdui-appbar">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a href="http://blog.gdfengshuo.com/2017/07/29/20" target="_blank" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">home</i></a>
+            <a href="http://blog.gdfengshuo.com/2017/07/29/20" target="_blank" class="mdui-typo-title">用户列表页面</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="/users/add" class="mdui-btn">添加用户</a>
+        </div>
+    </div>
+    <div class="mdui-container mdui-m-t-3">
+        <div class="mdui-table-fluid">
+            <table class="mdui-table mdui-table-hoverable">
+                <tr>
+                    <th>用户名</th>
+                    <th>邮箱</th>
+                    <th>操作</th>
+                </tr>
+                <% for(var i in user){ %>
+                    <tr>
+                        <td><%= user[i].username %></td>
+                        <td><%= user[i].email %></td>
+                        <td>
+                            <div class="mdui-typo">
+                                <a href="/users/detail/<%= user[i]._id %>"> 查看 </a>
+                                <a href="/users/edit/<%= user[i]._id %>"> 编辑 </a>
+                                <a href="#" class="del" data-id="<%= user[i]._id %>"> 删除 </a>
+                            </div>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script>
+            $('.del').on('click',function(){
+                var id = $(this).data('id');
+                $.ajax({
+                    url: '/users/del?id='+id,
+                    type: 'delete',
+                    success: function (res) {
+                    console.log(res)
+                }})
+            })
+    </script>
+</body>
+</html>

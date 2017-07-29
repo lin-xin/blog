@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户详情页面</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/libs/mdui/css/mdui.css">
+</head>
+<body class="mdui-theme-primary-teal">
+    <div class="mdui-appbar">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a href="http://blog.gdfengshuo.com/2017/07/29/20" target="_blank" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">person</i></a>
+            <a href="http://blog.gdfengshuo.com/2017/07/29/20" target="_blank" class="mdui-typo-title">用户详情页面</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="/users/add" class="mdui-btn">添加用户</a>
+        </div>
+    </div>
+    <div class="mdui-container mdui-m-t-3">
+        <div class="mdui-typo">
+            <p>_id：<%= user._id %></p>
+            <p>username：<%= user.username %></p>
+            <p>email：<%= user.email %></p>
+        </div>
+    </div>
+</body>
+</html>

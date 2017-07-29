@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户编辑页面</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/libs/mdui/css/mdui.css">
+</head>
+<body class="mdui-theme-primary-teal mdui-theme-accent-blue">
+    <div class="mdui-appbar">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a href="http://blog.gdfengshuo.com/2017/07/29/20" target="_blank" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">edit</i></a>
+            <a href="http://blog.gdfengshuo.com/2017/07/29/20" target="_blank" class="mdui-typo-title">用户编辑页面</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="/users/add" class="mdui-btn">添加用户</a>
+        </div>
+    </div>
+    <div class="mdui-container mdui-m-t-3">
+        <form action="/users/update" method="post">
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <div class="mdui-textfield">
+                <label class="mdui-textfield-label">username</label>
+                <input class="mdui-textfield-input" type="text" name="username" value="<%= user.username %>"/>
+            </div>
+            <div class="mdui-textfield">
+                <label class="mdui-textfield-label">email</label>
+                <input class="mdui-textfield-input" type="email" name="email" value="<%= user.email %>"/>
+            </div>
+            <button type="submit" class="mdui-btn mdui-color-theme-accent mdui-ripple">update</button>
+        </form>
+    </div>
+</body>
+</html>
