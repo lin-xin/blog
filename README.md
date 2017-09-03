@@ -27,6 +27,8 @@
 
 5. [移动端图片上传旋转、压缩的解决方案](https://github.com/lin-xin/blog/issues/18)
 
+6. [Electron 实战桌面计算器应用](https://github.com/lin-xin/blog/issues/22)
+
 ## [HTML5](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=HTML5)
 1. [HTML5 进阶系列：web Storage](https://github.com/lin-xin/blog/issues/11)
 
