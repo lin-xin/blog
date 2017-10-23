@@ -27,6 +27,8 @@
 
 5. [移动端图片上传旋转、压缩的解决方案](https://github.com/lin-xin/blog/issues/18)
 
+6. [Electron 实战桌面计算器应用](https://github.com/lin-xin/blog/issues/22)
+
 ## [HTML5](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=HTML5)
 1. [HTML5 进阶系列：web Storage](https://github.com/lin-xin/blog/issues/11)
 
@@ -37,6 +39,8 @@
 4. [HTML5 进阶系列：canvas 动态图表](https://github.com/lin-xin/blog/issues/15)
 
 5. [HTML5 进阶系列：文件上传下载](https://github.com/lin-xin/blog/issues/19)
+
+6. [HTML5 桌面通知：Notification API](https://github.com/lin-xin/blog/issues/23)
 
 ## [Node.js](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=node)
 1. [Node.js 入门：Express + Mongoose 基础使用](https://github.com/lin-xin/blog/issues/21)
