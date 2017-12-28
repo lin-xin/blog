@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"\"use strict\";\n\nfunction showName(name) {\n  document.getElementById('ts-app').innerHTML = 'Hello ' + name.value;\n}\nshowName({ value: 'TypeScript' });"},"hash":"46f1331e0c0d221cddc29eaa3471bfcf"}

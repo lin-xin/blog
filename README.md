@@ -51,11 +51,12 @@
 ## [微信小程序](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=wxapp)
 1. [微信小程序之购物车功能](https://github.com/lin-xin/blog/issues/14)
 
-## [webpack](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=webpack)
-1. [提高 webpack 构建 Vue 项目的速度](https://github.com/lin-xin/blog/issues/10)
+## [构建工具](https://github.com/lin-xin/blog/issues?q=label%3A%22web+tools%22)
 
-## [gulp](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=gulp) ##
 1. [gulp自动化压缩合并、加版本号解决方案](https://github.com/lin-xin/blog/issues/1)
 
 2. [精通 gulp 常用插件的功能和用法](https://github.com/lin-xin/blog/issues/2)
 
+3. [提高 webpack 构建 Vue 项目的速度](https://github.com/lin-xin/blog/issues/10)
+
+4. [Parcel：常见技术栈的集成方式](https://github.com/lin-xin/blog/issues/24)
