@@ -50,7 +50,14 @@
         <div id="recycle">回收站</div>
     </div>
     <script src="index.js"></script>
-    <script src="http://timruffles.github.io/ios-html5-drag-drop-shim/ios-drag-drop.js"></script>
+    <script src="./mobile-drag-drop/index.min.js"></script>
+    <script src="./mobile-drag-drop/scroll-behaviour.min.js"></script>
+    <script>
+        MobileDragDrop.polyfill({
+            // use this to make use of the scroll behaviour
+            dragImageTranslateOverride: MobileDragDrop.scrollBehaviourDragImageTranslateOverride
+        });
+    </script>
     
 </body>
 </html>
