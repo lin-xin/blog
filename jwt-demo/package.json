@@ -1,0 +1,34 @@
+{
+  "name": "jwt-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "register-service-worker": "^1.0.0",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vue2-toast": "^2.0.0",
+    "vuetify": "^1.1.10"
+  },
+  "devDependencies": {
+    "@mdi/font": "^2.6.95",
+    "@vue/cli-plugin-babel": "^3.0.0-rc.11",
+    "@vue/cli-plugin-pwa": "^3.0.0-rc.11",
+    "@vue/cli-service": "^3.0.0-rc.11",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
