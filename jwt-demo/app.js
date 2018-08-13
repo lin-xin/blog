@@ -3,6 +3,7 @@ const koa = require('koa'),
     router = require('koa-router')(),
     json = require('koa-json'),
     koajwt = require('koa-jwt'),
+    serve = require('koa-static'),
     bodyparser = require('koa-bodyparser');
 
 const db = require('./server/config/db.js'),
@@ -11,6 +12,7 @@ const db = require('./server/config/db.js'),
 
 const user = require('./server/routes/user.js');
 
+app.use(serve('./dist'));
 app.use(json());
 app.use(bodyparser());
 app.use(sendHandle());
