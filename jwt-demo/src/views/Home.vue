@@ -39,9 +39,7 @@
                             </div>
                             </v-card-title>
                             <v-card-text>
-                                <div>
-                                    {{content.text}}
-                                </div> 
+                                <div class="text" v-html="content.text"></div> 
                             </v-card-text>
                         </v-card>
                     </v-flex>
@@ -81,6 +79,9 @@
                 }
             ]
         }),
+        created(){
+            this.getUser();
+        },
         methods: {
             switchType(type){
                 switch (type) {
@@ -99,25 +100,68 @@
                 }
             },
             getUser(){
-                this.content = {
-                    title: '用户信息',
-                    text: '11'
-                }
+                this.$axios.get('/api/info').then(res => {
+                    this.content = {
+                        title: '用户信息',
+                        text: `
+                            <p>描述：请求头中带着 token 发起请求，获取用户信息</p>
+                            <p>请求接口：'/api/info'</p>
+                            <p>请求结果：${JSON.stringify(res)}</p>
+                        `
+                    }
+                })
             },
             getToken(){
                 const token = localStorage.getItem('token');
+                const token_exp = localStorage.getItem('token_exp');
+                const now_time = new Date().getTime();
+                console.log(now_time - token_exp);
                 this.content = {
                     title: 'token',
-                    text: token
+                    text: `
+                        <p>当前的 token 为：${token}</p>
+                        <p>token过期时间还剩：${1000 * 60 * 60 * 2 - (now_time - token_exp)} ms</p>
+                    `
                 }
             },
             delToken(){
                 localStorage.removeItem('token');
+                localStorage.removeItem('token_exp');
+                this.$axios.get('/api/info').then(res => {
+                    this.content = {
+                        title: '用户信息',
+                        text: `
+                            <p>描述：请求头中带着 token 发起请求，获取用户信息</p>
+                            <p>请求接口：'/api/info'</p>
+                            <p>请求结果：${JSON.stringify(res)}</p>
+                        `
+                    }
+                }).catch(err => {
+                    this.$toast('登录状态已失效，请重新登录');
+                    this.content = {
+                        title: '无token请求',
+                        text: `
+                            <p>描述：请求头中没有 token 发起请求</p>
+                            <p>请求接口：'/api/info'</p>
+                            <p>请求结果：${JSON.stringify(err.response)}</p>
+                        `
+                    }
+                    setTimeout(() => {
+                        this.$router.push('/login');
+                    }, 2500);
+                })
             },
             logout(){
                 localStorage.removeItem('token');
+                localStorage.removeItem('token_exp');
                 this.$router.push('/login');
             }
         }
     }
 </script>
+
+<style scoped>
+.text{
+    word-wrap: break-word;
+}
+</style>

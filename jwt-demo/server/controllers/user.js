@@ -14,7 +14,7 @@ class UserController {
         }
         const user = new userModel({
             name: data.name,
-            password: crypto.createHash('md5').update(data.password).digest('hex'),
+            password: crypto.createHash('md5').update(data.password).digest('hex'),     // 密码加密存储
             email: data.email
         })
         const result = await user.save();
@@ -34,7 +34,7 @@ class UserController {
             const token = jwt.sign({
                 name: result.name,
                 _id: result._id
-            }, 'note_token', { expiresIn: 60 });
+            }, 'my_token', { expiresIn: 60*60 });
             return ctx.send(token, '登录成功');
         }else{
             return ctx.sendError('000002', '用户名或密码错误');
@@ -49,30 +49,9 @@ class UserController {
             const result = {
                 _id: user._id,
                 name: user.name,
-                email: user.email,
-                avatar: user.avatar
+                email: user.email
             };
             return ctx.send(result);
-        }else{
-            return ctx.sendError('000002');
-        }
-    }
-    // 更新用户头像
-    static async avatar(ctx){
-        const avatar = ctx.request.body.avatar;
-        if(avatar === undefined || avatar === ''){
-            return ctx.sendError('000002', '参数不合法');
-        }
-        const user = await userModel.findById(ctx.state.user._id);
-        user.avatar = avatar;
-        const result = await user.save();
-        if(result !== null){
-            return ctx.send({
-                _id: user._id,
-                name: user.name,
-                email: user.email,
-                avatar: user.avatar
-            });
         }else{
             return ctx.sendError('000002');
         }

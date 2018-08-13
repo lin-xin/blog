@@ -16,9 +16,9 @@ app.use(bodyparser());
 app.use(sendHandle());
 app.use(errorHandle);
 app.use(koajwt({
-        secret: 'note_token'
+        secret: 'my_token'
     }).unless({
-        path: [/\/user\/register/, /\/user\/login/]
+        path: [/\/api\/register/, /\/api\/login/]
     }));
 
 router.use('/api', user.routes());

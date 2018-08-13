@@ -22,7 +22,10 @@ Vue.use(VueToast, {
 router.beforeEach((to, from, next) => {
 	if (to.meta.requireAuth) {
 		const token = localStorage.getItem('token');
-		if (token) {
+		const token_exp = localStorage.getItem('token_exp');
+		const now_time = new Date().getTime();
+		console.log(now_time - token_exp);
+		if (token && now_time - token_exp <= 1000 * 60 * 60 * 2) {
 			next();
 		} else {
 			next('/login');
