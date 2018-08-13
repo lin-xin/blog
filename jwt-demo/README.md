@@ -1,4 +1,4 @@
-## JWT
+## JWT-DEMO
 首先确保已经安装了 node.js 和 mongodb 数据库。
 
 `npm install` 安装依赖

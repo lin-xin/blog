@@ -45,7 +45,7 @@
 ## [Node.js](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=node)
 1. [Node.js 入门：Express + Mongoose 基础使用](https://github.com/lin-xin/blog/issues/21)
 
-2. [Koa2 之文件上传下载](https://github.com/lin-xin/blog/issues/25)
+2. [Node.js 实战：Koa2 之文件上传下载](https://github.com/lin-xin/blog/issues/25)
 
 3. [使用 Node.js 开发简单的脚手架工具](https://github.com/lin-xin/blog/issues/27)
 
