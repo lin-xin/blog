@@ -12,7 +12,7 @@
 
 4. [Vue.js 插件开发详解](https://github.com/lin-xin/blog/issues/9)
 
-5. [vue-schart ： vue.js 的图表组件](https://github.com/lin-xin/blog/issues/17)
+5. [vue-schart：vue.js 的图表组件](https://github.com/lin-xin/blog/issues/17)
 
 6. [vue.js 组件之间传递数据](https://github.com/lin-xin/blog/issues/20)
 
@@ -21,7 +21,7 @@
 
 2. [JavaScript 中 apply 、call 的详解](https://github.com/lin-xin/blog/issues/7)
 
-3. [JavaScript 中 闭包 的详解](https://github.com/lin-xin/blog/issues/8)
+3. [JavaScript 中闭包的详解](https://github.com/lin-xin/blog/issues/8)
 
 4. [sChart.js：一个小型简单的图表库](https://github.com/lin-xin/blog/issues/16)
 
@@ -45,9 +45,11 @@
 ## [Node.js](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=node)
 1. [Node.js 入门：Express + Mongoose 基础使用](https://github.com/lin-xin/blog/issues/21)
 
-2. [Node.js 实战：Koa2 之文件上传下载](https://github.com/lin-xin/blog/issues/25)
+2. [Node.js 应用：Koa2 之文件上传下载](https://github.com/lin-xin/blog/issues/25)
 
 3. [使用 Node.js 开发简单的脚手架工具](https://github.com/lin-xin/blog/issues/27)
+
+4. [Node.js 应用：Koa2 使用 JWT 进行鉴权](https://github.com/lin-xin/blog/issues/28)
 
 ## [React Native](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=react-native)
 1. [React Native组件集成到Android原生项目](https://github.com/lin-xin/blog/issues/26)
