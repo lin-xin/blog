@@ -1,7 +1,7 @@
 # 林鑫个人博客 #
-用于总结自己平时工作和学习中的经验。[线上地址](https://lin-xin.github.io/)
+用于总结自己平时工作和学习中的经验。[线上地址](http://blog.gdfengshuo.com/)
 
-订阅请 watch， 收藏点赞请 star， fork 好像没必要， 打赏请[微信扫码](http://www.gdfengshuo.com/blog/static/weixin.jpg)
+订阅请 watch， 收藏点赞请 star， fork 好像没必要， 打赏请[微信扫码](http://blog.gdfengshuo.com/images/weixin.jpg)
 
 ## [Vue](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=vue)
 1. [Vue2 后台管理系统解决方案](https://github.com/lin-xin/manage-system)
@@ -15,6 +15,8 @@
 5. [vue-schart：vue.js 的图表组件](https://github.com/lin-xin/blog/issues/17)
 
 6. [vue.js 组件之间传递数据](https://github.com/lin-xin/blog/issues/20)
+
+7. [vue-manage-system 后台管理系统开发总结](https://github.com/lin-xin/blog/issues/30)
 
 ## [JavaScript](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=javascript)
 1. [JavaScript 中 this 的详解](https://github.com/lin-xin/blog/issues/6)
