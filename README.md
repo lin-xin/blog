@@ -71,3 +71,5 @@
 3. [提高 webpack 构建 Vue 项目的速度](https://github.com/lin-xin/blog/issues/10)
 
 4. [Parcel：常见技术栈的集成方式](https://github.com/lin-xin/blog/issues/24)
+
+5. [Rollup.js: 开源JS库的打包利器](https://github.com/lin-xin/blog/issues/36)
