@@ -18,6 +18,8 @@
 
 7. [vue-manage-system 后台管理系统开发总结](https://github.com/lin-xin/blog/issues/30)
 
+8. [vue项目中实现Excel文件的上传和下载](https://github.com/lin-xin/blog/issues/40)
+
 ## [JavaScript](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=javascript)
 1. [JavaScript 中 this 的详解](https://github.com/lin-xin/blog/issues/6)
 
@@ -52,6 +54,8 @@
 3. [使用 Node.js 开发简单的脚手架工具](https://github.com/lin-xin/blog/issues/27)
 
 4. [Node.js 应用：Koa2 使用 JWT 进行鉴权](https://github.com/lin-xin/blog/issues/28)
+
+5. [vue3 + tsrpc +mongodb 实现后台管理系统](https://github.com/lin-xin/blog/issues/41)
 
 ## [React Native](https://github.com/lin-xin/blog/issues?utf8=%E2%9C%93&q=react-native)
 1. [React Native组件集成到Android原生项目](https://github.com/lin-xin/blog/issues/26)
